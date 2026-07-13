@@ -30,7 +30,7 @@ Deno.serve(async (req) => {
     const { data: tokens } = await supabase
       .from("push_tokens")
       .select("expo_push_token")
-      .eq("profile_id", student.parent_id);
+      .eq("parent_id", student.parent_id);
 
     for (const { expo_push_token } of tokens ?? []) {
       await fetch("https://exp.host/--/api/v2/push/send", {

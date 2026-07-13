@@ -22,9 +22,9 @@ absences.
 - `tutor/adhoc.js` — post ad-hoc class screen
 - `tutor/attendance-history.js` — monthly calendar + pattern detection
 - `parent/homework.js`, `parent/attendance-history.js`, `parent/messages.js`
-- Push notification wiring: a Supabase Edge Function that fires when an
-  attendance row is inserted with status = 'absent', looks up the
-  parent's push token, and calls the Expo push API
+- Wiring the tutor attendance screen to actually call the included
+  `supabase/functions/notify-absence` edge function after saving
+  absences (the function itself is written, just not yet called)
 - Sign-up flow (this scaffold assumes accounts are created manually in
   Supabase for now — add self-serve signup later if needed)
 
