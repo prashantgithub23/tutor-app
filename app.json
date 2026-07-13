@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "tutor-app",
+    "slug": "tutor-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "tutorapp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.tutorapp"
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-notifications", { "icon": "./assets/notification-icon.png" }]
+    ]
+  }
+}
